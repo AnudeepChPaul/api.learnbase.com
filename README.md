@@ -1,0 +1,1 @@
+# SSR-static-api
