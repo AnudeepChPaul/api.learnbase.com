@@ -10,6 +10,7 @@ const app = express();
 app.get("/getAppProperties", (req, res) => {
   res.statusCode = 200;
   res.setHeader("Content-Type", "application/json");
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.json({
     title: "Create Next App",
     header: {
@@ -34,6 +35,7 @@ app.get("/getAppProperties", (req, res) => {
 
 
 app.get('/modules', (req,res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
   return res.json({
     title: 'Modules'
     , modules: {
@@ -52,6 +54,7 @@ app.get('/modules', (req,res) => {
 })
 
 app.get('/modules/:moduleId', (req,res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
   return res.json({
     title: 'Modules'
     , modules: {
