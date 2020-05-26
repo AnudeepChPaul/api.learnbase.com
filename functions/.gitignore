@@ -1,4 +1,1 @@
-**/node_modules
-**/.next
-**/.vscode
-yarn.lock
+node_modules/

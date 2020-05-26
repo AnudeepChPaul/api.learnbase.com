@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "dev": "firebase serve",
+    "build": "firebase deploy"
+  },
   "dependencies": {
     "body-parser": "^1.19.0"
   }
