@@ -1,9 +1,12 @@
 {
+  "name": "api.learnbase.com",
   "scripts": {
     "dev": "firebase serve",
-    "build": "firebase deploy"
+    "build": "firebase deploy",
+    "clear_node_modules": "rm -rf ./node_modules"
   },
   "dependencies": {
-    "body-parser": "^1.19.0"
+    "body-parser": "^1.19.0",
+    "sass": "^1.26.5"
   }
 }
