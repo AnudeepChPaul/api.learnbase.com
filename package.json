@@ -6,6 +6,7 @@
     "clear_node_modules": "rm -rf ./node_modules"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "body-parser": "^1.19.0",
     "sass": "^1.26.5"
   }
