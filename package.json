@@ -1,13 +1,10 @@
 {
   "name": "api.learnbase.com",
-  "scripts": {
-    "dev": "firebase serve",
-    "build": "firebase deploy",
-    "clear_node_modules": "rm -rf ./node_modules"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
-    "body-parser": "^1.19.0",
-    "sass": "^1.26.5"
-  }
+  "version": "1.0.0",
+  "description": "Api implementations for learnbase",
+  "main": "index.js",
+  "repository": "https://github.com/AnudeepChPaul/api.learnbase.com.git",
+  "author": "Anudeep Chandra Paul <achandrapaul@manh.com>",
+  "license": "MIT",
+  "private": false
 }
