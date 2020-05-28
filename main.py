@@ -21,7 +21,7 @@ class GetAppProperties(Resource):
         return getAppProperties()
 
 
-@modules_ns.route('/list/<path:module_id>')
+@modules_ns.route('/<path:module_id>')
 class GetModuleById(Resource):
     def get(self, module_id):
         return getModuleById(module_id)
