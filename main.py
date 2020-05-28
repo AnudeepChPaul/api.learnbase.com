@@ -8,11 +8,11 @@ api = Api(app,
           title='Our sample API',
           description='This is our sample API')
 
-api_ns = api.namespace('', description='TODO operations')
+app_ns = api.namespace('app', description='TODO operations')
 modules_ns = api.namespace('modules', description='TODO operations')
 
 
-@api_ns.route('/getAppProperties')
+@app_ns.route('/getAppProperties')
 class GetAppProperties(Resource):
     def get(self):
         return {

@@ -6,5 +6,8 @@
   "repository": "https://github.com/AnudeepChPaul/api.learnbase.com.git",
   "author": "Anudeep Chandra Paul <achandrapaul@manh.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "start": "gunicorn -b :5000 main:app"
+  }
 }
