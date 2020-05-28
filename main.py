@@ -1,7 +1,7 @@
 from flask import Flask, request
 from flask_restplus import Api, Resource
 from flask_cors import CORS
-from app.db import getAppProperties, getAllModules, getModuleById, getTop5Modules
+from app.db import getAppProperties, getAllModules, getModuleById, getTop5Modules, getModuleName
 
 app = Flask(__name__)
 CORS(app)
@@ -21,11 +21,10 @@ class GetAppProperties(Resource):
         return getAppProperties()
 
 
-@modules_ns.route('/<path:module_id>')
+@modules_ns.route('/list/<path:module_id>')
 class GetModuleById(Resource):
     def get(self, module_id):
-        data = self.getModuleName(module_id)
-        return getModuleById()
+        return getModuleById(module_id)
 
 
 @modules_ns.route('/list')
