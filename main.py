@@ -1,8 +1,12 @@
+from importlib import resources
+
 from flask import Flask, request
 from flask_restplus import Api, Resource
+from flask_cors import CORS
 from app.db import getAppProperties, getAllModules, getModuleById, getTop5Modules
 
 app = Flask(__name__)
+CORS(app)
 
 api = Api(app,
           version='0.1',
