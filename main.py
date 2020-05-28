@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_restplus import Api, Resource
+from app.db import getAppProperties, getAllModules
 
 app = Flask(__name__)
 
@@ -15,14 +16,7 @@ modules_ns = api.namespace('modules', description='TODO operations')
 @app_ns.route('/getAppProperties')
 class GetAppProperties(Resource):
     def get(self):
-        return {
-            'title': "Learn",
-            'allModules': {
-                'text': "All Modules",
-                'url': "/modules",
-                'scheme': "/modules",
-            }
-        }
+        return getAppProperties()
 
 
 @modules_ns.route('/<path:module_id>')
@@ -63,30 +57,7 @@ class GetModuleById(Resource):
 @modules_ns.route('/list')
 class GetModules(Resource):
     def get(self):
-        return {
-            'title': "Modules",
-            'modules': {
-                'baseUrl': "/modules",
-                'list': [
-                    { 'text': "Python", 'url': "/python", 'scheme': "/[moduleId]" },
-                    { 'text': "SQL", 'url': "/sql", 'scheme': "/[moduleId]" },
-                    { 'text': "Math", 'url': "/math", 'scheme': "/[moduleId]" },
-                    { 'text': "Statistics", 'url': "/statistics", 'scheme': "/[moduleId]" },
-                    { 'text': "AI & ML 1", 'url': "/ai-ml-1", 'scheme': "/[moduleId]" },
-                    { 'text': "AI & ML 2", 'url': "/ai-ml-2", 'scheme': "/[moduleId]" },
-                    {
-                        'text': "Linear Regression",
-                        'url': "/linear-regression",
-                        'scheme': "/[moduleId]",
-                    },
-                    {
-                        'text': "Simple Linear Regression",
-                        'url': "/simple-linear-regression",
-                        'scheme': "/[moduleId]",
-                    }
-                ]
-            }
-        }
+        return getAllModules()
 
 
 if __name__ == '__main__':
