@@ -1,5 +1,3 @@
-from importlib import resources
-
 from flask import Flask, request
 from flask_restplus import Api, Resource
 from flask_cors import CORS
