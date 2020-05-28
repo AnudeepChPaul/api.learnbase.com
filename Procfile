@@ -1,2 +1,2 @@
-web: gunicorn -b :5000 main:app
+web: gunicorn -b :$PORT main:app
 heroku ps:scale web=1
